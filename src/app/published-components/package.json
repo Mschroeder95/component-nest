@@ -1,6 +1,6 @@
 {
   "name": "component-nest",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A component library for Next.js using Tailwind css",
   "main": "dist/index.js",
   "files": [
