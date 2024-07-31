@@ -20,7 +20,7 @@ git checkout -b release/x.x.x
 ```bash
 git add .
 git commit -m "version bump"
-git push
+git push --set-upstream origin release/x.x.x
 ```
 
 - Open a [pull request](https://github.com/Mschroeder95/component-nest/pulls) for the release/x.x.x branch into main
