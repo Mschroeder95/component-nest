@@ -21,7 +21,8 @@ jobs:
         working-directory: ./src/app/published-components
         run: |
           npm install typescript
+          npm install --save-dev @types/react
           npm run build:typescript
           npm config set registry https://registry.npmjs.org/
-          npm config set _authToken="NPM_TOKEN"
+          npm config set _authToken=${{secrets.NPM_TOKEN}}
           npm publish
