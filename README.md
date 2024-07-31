@@ -5,3 +5,4 @@
 ## Deployment
 
 - Merge a branch with name matching releases/\*\* into main
+- Make sure to bump the package verion in [src/app/published-components/package.json](src/app/published-components/package.json)
