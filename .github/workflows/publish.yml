@@ -3,20 +3,15 @@ on:
   release:
     types: [created]
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
-          registry-url: 'https://registry.npmjs.org'
-      - name: Install dependencies and build 🔧
-        run: cd src/app/published-components
-        run: npm ci && npm run build
-      - name: Publish package on NPM 📦
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          node-version: "20"
+      - run: npm ci
+      - run: npm test
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
