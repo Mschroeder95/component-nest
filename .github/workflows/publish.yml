@@ -1,13 +1,16 @@
 name: Publish to NPM
+#on:
+#  pull_request_target:
+#    types:
+#      - closed
+#    branches:
+#      - main
 on:
-  pull_request_target:
-    types:
-      - closed
-    branches:
-      - main
+  pull_request:
+    branches: [main]
 jobs:
   release:
-    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'release/')
+    #if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'release/')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
