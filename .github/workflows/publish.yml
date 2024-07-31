@@ -14,9 +14,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "20"
-      - run: cd ./src/app/published-components
-      - run: npm install typescript
-      - run: npm run build
-      - uses: JS-DevTools/npm-publish@v3
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      - name: publish npm
+        working-directory: ./src/app/published-components
+        run: |
+          cd ./src/app/published-components
+          npm install typescript
+          npm run build:typescript
+          npm config set registry https://registry.npmjs.org/
+          npm config set _authToken="NPM_TOKEN"
+          npm publish

@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "build": "tsc --build ./tsconfig.json"
+    "build:typescript": "tsc --build ./tsconfig.json"
   },
   "repository": {
     "type": "git",
