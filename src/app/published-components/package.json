@@ -1,0 +1,39 @@
+{
+  "name": "component-nest",
+  "version": "1.0.4",
+  "description": "A component library for Next.js using Tailwind css",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc --build ./tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mschroeder95/component-nest.git"
+  },
+  "keywords": [
+    "react",
+    "tailwind",
+    "tailwindcss",
+    "next.js",
+    "nextjs",
+    "component",
+    "components",
+    "open-source",
+    "Typescript"
+  ],
+  "author": "Michael Schroeder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mschroeder95/component-nest/issues"
+  },
+  "homepage": "https://github.com/Mschroeder95/component-nest#readme"
+}
