@@ -4,10 +4,10 @@ on:
     types:
       - closed
     branches:
-      - "releases/**"
+      - main
 jobs:
   if_merged:
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'release/')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
