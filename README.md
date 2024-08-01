@@ -1,6 +1,30 @@
 # Component Nest
 
-- This is an open source Next.js component library
+- This is an open source Next.js component library [published on npm](https://www.npmjs.com/package/component-nest?activeTab=readme)
+  <br />
+  <br />
+  <br />
+
+# Usage
+
+- Review the npm package [component-nest](https://www.npmjs.com/package/component-nest?activeTab=readme)
+
+## Installation
+
+- Have an already existing or create new [Next.js](https://nextjs.org/) project
+- Install the the [component-nest](https://www.npmjs.com/package/component-nest?activeTab=readme) dependency by running:
+
+```bash
+npm install component-nest
+```
+
+<br />
+<br />
+<br />
+
+# Contribution
+
+## Adding new components
 
 ## Deployment
 

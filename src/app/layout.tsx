@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import TopNavbar from "./docs/navbars/TopNavbar";
+import { cookies } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +16,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const theme = cookies().get("theme")?.value;
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${theme}`}>
+      <body className={inter.className}>
+        <TopNavbar></TopNavbar>
+        {children}
+      </body>
     </html>
   );
 }
