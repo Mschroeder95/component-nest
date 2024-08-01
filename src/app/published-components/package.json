@@ -1,6 +1,6 @@
 {
   "name": "component-nest",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A component library for Next.js using Tailwind css",
   "main": "dist/index.js",
   "files": [
@@ -13,7 +13,7 @@
     }
   },
   "scripts": {
-    "build": "tsc --build ./tsconfig.json"
+    "build:typescript": "tsc --build ./tsconfig.json"
   },
   "repository": {
     "type": "git",
