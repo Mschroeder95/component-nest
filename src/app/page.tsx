@@ -8,6 +8,7 @@ export default function Home() {
       <H1>Hello</H1>
       <H2>Test</H2>
       <H3>blah</H3>
+      <div className="h-[2000px] w-screen bg-light-1 dark:bg-dark-1"></div>
     </main>
   );
 }
