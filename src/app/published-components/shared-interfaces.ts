@@ -6,24 +6,19 @@ export interface IsMobileOverride {
   isMobileOverride?: boolean;
 }
 
-export interface HasChildren {
+export interface HasChildNodes {
   children?: React.ReactNode;
+}
+
+export interface HasChildText {
+  children?: string;
 }
 
 export interface Selectable {
   selected?: boolean | undefined;
 }
 
-export interface Href {
-  href: string;
-  onClick?: never;
-}
-
-export interface OnClick {
-  href?: never;
-  onClick: CallableFunction;
-}
-
-export interface OnClickOrHref {
-  onClickOrHref: OnClick | Href;
+export type ColorModeOptions = "dark" | "light";
+export interface ColorMode {
+  colorMode: ColorModeOptions;
 }

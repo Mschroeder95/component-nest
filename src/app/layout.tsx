@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { cookies } from "next/headers";
 import Nav from "./components/Nav";
+import { getColorMode } from "./published-components/server/theme/color-mode";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,9 +16,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const theme = cookies().get("theme")?.value;
+  const colorMode = getColorMode("light");
   return (
-    <html lang="en" className={`${theme}`}>
+    <html lang="en" className={`${colorMode}`}>
       <body className={inter.className}>
         <Nav></Nav>
         {children}

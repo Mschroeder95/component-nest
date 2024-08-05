@@ -1,27 +1,24 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import TextLink from "../published-components/client/links/TextLink";
 import TopNavbar from "../published-components/client/navbars/TopNavbar";
 import { Button } from "../published-components/client/buttons/Button";
+import ColorModeToggle from "../published-components/client/buttons/ColorModeToggle";
 
 export default function Nav() {
-  const router = useRouter();
-
   return (
-    <TopNavbar logoPath="/logo-light.png">
-      <TextLink text="Docs" onClickOrHref={{ href: "/docs" }}></TextLink>
-      <TextLink
-        text="GitHub"
-        onClickOrHref={{
-          href: "https://github.com/Mschroeder95/component-nest",
-        }}
-      ></TextLink>
-      <Button
-        text="Learn"
-        onClickOrHref={{ href: "https://nextjs.org/" }}
-        iconSrc="/next.svg"
-      ></Button>
+    <TopNavbar
+      logoPathDarkMode="/logo-dark.png"
+      logoPathLightMode="/logo-light.png"
+    >
+      <TextLink href="/docs">Docs</TextLink>
+      <TextLink href="https://github.com/Mschroeder95/component-nest">
+        GitHub
+      </TextLink>
+      <Button iconSrc="/next.svg" href="https://nextjs.org/">
+        Learn
+      </Button>
+      <ColorModeToggle></ColorModeToggle>
     </TopNavbar>
   );
 }

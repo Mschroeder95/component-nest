@@ -3,20 +3,22 @@
 import { twMerge } from "tailwind-merge";
 import {
   ClassName,
-  HasChildren,
+  HasChildNodes,
   IsMobileOverride,
 } from "../../shared-interfaces";
 import { useRouter } from "next/navigation";
 import useMobileCheck from "../../hooks/useMobileCheck";
 
-interface TopNavbarProps extends ClassName, IsMobileOverride, HasChildren {
-  logoPath?: string;
+interface TopNavbarProps extends ClassName, IsMobileOverride, HasChildNodes {
+  logoPathLightMode?: string;
+  logoPathDarkMode?: string;
   alt?: string;
 }
 
 export default function TopNavbar({
   className,
-  logoPath,
+  logoPathDarkMode,
+  logoPathLightMode,
   alt,
   children,
   isMobileOverride,
@@ -25,11 +27,22 @@ export default function TopNavbar({
   const { isMobile } = useMobileCheck(isMobileOverride);
 
   return (
-    <nav className={twMerge(`flex h-20 w-screen bg-light-1 p-2`, className)}>
+    <nav
+      className={twMerge(
+        `flex h-20 w-screen bg-light-1 p-2 dark:bg-dark-1`,
+        className,
+      )}
+    >
       <div className="mx-auto flex h-full w-full max-w-[90rem] flex-row items-center justify-between">
         <img
-          className="h-14 cursor-pointer"
-          src={logoPath}
+          className="block h-14 cursor-pointer dark:hidden"
+          src={logoPathLightMode}
+          alt={alt}
+          onClick={() => router.push("/")}
+        />
+        <img
+          className="hidden h-14 cursor-pointer dark:block"
+          src={logoPathDarkMode}
           alt={alt}
           onClick={() => router.push("/")}
         />

@@ -1,40 +1,62 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { ClassName, OnClickOrHref, Selectable } from "../../shared-interfaces";
+import { ClassName, Selectable } from "../../shared-interfaces";
 import { buildOnClick } from "../../utility";
 import { twMerge } from "tailwind-merge";
+import { IconElement } from "../icons/icons";
 
-export interface ButtonProps extends ClassName, Selectable, OnClickOrHref {
-  text: string;
+export interface ButtonHrefProps extends ClassName, Selectable {
   iconSrc?: string;
   iconAlt?: string;
   iconPlacement?: "left" | "right";
+  onClick?: never;
+  href?: string;
+  children: string | IconElement;
+}
+
+export interface ButtonOnClickProps extends ClassName, Selectable {
+  iconSrc?: string;
+  iconAlt?: string;
+  iconPlacement?: "left" | "right";
+  onClick?: CallableFunction;
+  href?: never;
+  children: string | IconElement;
 }
 
 export function Button({
-  text,
-  onClickOrHref,
+  children,
   selected,
   className,
   iconSrc,
   iconAlt,
   iconPlacement,
-}: ButtonProps) {
+  onClick,
+  href,
+}: ButtonHrefProps | ButtonOnClickProps) {
   const router = useRouter();
+
+  const buttonPadding = typeof children === "string" ? "px-4 py-2" : "p-2";
   return (
     <div
       className={twMerge(
-        `flex h-fit w-fit select-none justify-center rounded bg-light-3 px-2 py-1 shadow-md transition-all ease-in-out hover:cursor-pointer hover:bg-light-2 active:opacity-50 ${selected ? "ring-selected ring-2 ring-offset-1" : ""}`,
+        `flex h-fit w-fit select-none justify-center rounded bg-light-4 shadow-md transition-all ease-in-out hover:cursor-pointer hover:bg-light-5 active:opacity-50 dark:bg-dark-4 dark:hover:bg-dark-3 ${buttonPadding} ${selected ? "ring-selected ring-2 ring-offset-1" : ""}`,
         className,
       )}
-      onClick={() => buildOnClick(onClickOrHref, router)()}
+      onClick={() => buildOnClick(router, onClick, href)()}
     >
       <div
         className={`flex ${iconPlacement == "right" ? "flex-row-reverse" : "flex-row"} min-h-[1.5rem] items-center gap-2`}
       >
-        <img className="h-[1rem]" src={iconSrc} alt={iconAlt} />
-        <p>{text}</p>
+        {iconSrc && typeof children === "string" && (
+          <img className="h-[1rem]" src={iconSrc} alt={iconAlt} />
+        )}
+        {typeof children === "string" && (
+          <p className="text-light-6 dark:text-dark-6">{children}</p>
+        )}
+        {typeof children !== "string" && (
+          <p className="text-light-6 dark:text-dark-6">{children}</p>
+        )}
       </div>
     </div>
   );

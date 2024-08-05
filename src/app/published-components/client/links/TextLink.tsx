@@ -1,36 +1,46 @@
 "use client";
 import { twMerge } from "tailwind-merge";
-import { ClassName, OnClickOrHref, Selectable } from "../../shared-interfaces";
+import { ClassName, HasChildText, Selectable } from "../../shared-interfaces";
 import { usePathname, useRouter } from "next/navigation";
 import { buildOnClick } from "../../utility";
 
-export interface TextLinkProps extends ClassName, Selectable, OnClickOrHref {
-  text: string;
+export interface TextLinkOnClickProps
+  extends ClassName,
+    Selectable,
+    HasChildText {
+  onClick?: CallableFunction;
+  href?: never;
+}
+
+export interface TextLinkHrefProps extends ClassName, Selectable, HasChildText {
+  onClick?: never;
+  href?: string;
 }
 
 export default function TextLink({
-  text,
-  onClickOrHref,
   selected,
   className,
-}: TextLinkProps) {
+  href,
+  onClick,
+  children,
+}: TextLinkOnClickProps | TextLinkHrefProps) {
   const router = useRouter();
   const pathname = usePathname();
 
-  selected =
-    selected === undefined ? pathname === onClickOrHref.href : selected;
-
-  const selectedCss = selected ? "text-light-3" : "text-light-6";
+  selected = selected === undefined ? pathname === href : selected;
+  const selectedCss = selected
+    ? "text-light-4 dark:text-dark-4"
+    : "text-light-6 dark:text-dark-6";
 
   return (
     <div
       className={twMerge(`group/link cusor-pointer h-fit w-fit`, className)}
-      onClick={() => buildOnClick(onClickOrHref, router)()}
+      onClick={() => buildOnClick(router, onClick, href)()}
     >
       <p
-        className={`cursor-pointer select-none transition-all ease-in-out group-hover/link:text-light-3 ${selectedCss}`}
+        className={`cursor-pointer select-none transition-all ease-in-out group-hover/link:text-light-4 dark:group-hover/link:text-dark-4 ${selectedCss}`}
       >
-        {text}
+        {children}
       </p>
     </div>
   );
