@@ -7,7 +7,8 @@ export function toggleColorMode() {
     getColorModeCookie("light") == "light"
       ? setClientSideCookie(COLOR_MODE_COOKIE, "dark")
       : setClientSideCookie(COLOR_MODE_COOKIE, "light");
-    window.location.reload();
+    let htmlTag = window.document.getElementsByTagName("html")[0];
+    htmlTag.className = getColorModeCookie("light");
   }
 }
 
