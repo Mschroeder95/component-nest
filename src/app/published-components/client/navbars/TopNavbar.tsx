@@ -1,15 +1,11 @@
 "use client";
 
 import { twMerge } from "tailwind-merge";
-import {
-  ClassName,
-  HasChildNodes,
-  IsMobileOverride,
-} from "../../shared-interfaces";
+import { ClassName, HasChildNodes } from "../../shared-interfaces";
 import { useRouter } from "next/navigation";
 import useMobileCheck from "../../hooks/useMobileCheck";
 
-interface TopNavbarProps extends ClassName, IsMobileOverride, HasChildNodes {
+interface TopNavbarProps extends ClassName, HasChildNodes {
   logoPathLightMode?: string;
   logoPathDarkMode?: string;
   alt?: string;
@@ -21,10 +17,8 @@ export default function TopNavbar({
   logoPathLightMode,
   alt,
   children,
-  isMobileOverride,
 }: TopNavbarProps) {
   const router = useRouter();
-  const { isMobile } = useMobileCheck(isMobileOverride);
 
   return (
     <nav
@@ -46,11 +40,9 @@ export default function TopNavbar({
           alt={alt}
           onClick={() => router.push("/")}
         />
-        {!isMobile && (
-          <div className="flex h-fit w-fit flex-row items-center gap-4">
-            {children}
-          </div>
-        )}
+        <div className="hidden h-fit w-fit flex-row items-center gap-4 md:flex lg:flex">
+          {children}
+        </div>
       </div>
     </nav>
   );

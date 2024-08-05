@@ -2,10 +2,6 @@ export interface ClassName {
   className?: string;
 }
 
-export interface IsMobileOverride {
-  isMobileOverride?: boolean;
-}
-
 export interface HasChildNodes {
   children?: React.ReactNode;
 }
