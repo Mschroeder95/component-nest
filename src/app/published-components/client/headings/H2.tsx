@@ -7,7 +7,7 @@ export default function H2({ children, className }: HeadingProps) {
   return (
     <h2
       className={twMerge(
-        "text-4xl font-extrabold text-light-6 dark:text-dark-6",
+        "text-4xl font-extrabold text-light-font-color-1 dark:text-dark-font-color-1",
         className,
       )}
     >

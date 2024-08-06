@@ -19,6 +19,7 @@ export default function RootLayout({
   const colorMode = getColorMode("light");
   return (
     <html lang="en" className={`${colorMode}`}>
+      <head></head>
       <body className={inter.className}>
         <Nav></Nav>
         {children}

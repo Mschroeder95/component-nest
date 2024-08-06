@@ -1,5 +1,8 @@
 export const colors = {
-  "light-6": "#000000",
+  "light-hyperlink-color": "#2563eb",
+  "light-hyperlink-visited-color": "#4f46e5",
+  "light-font-color-1": "#000000",
+  "light-font-color-2": "#575757",
   "light-5": "#22577a",
   "light-4": "#38a3a5",
   "light-3": "#80ed99",
@@ -10,5 +13,8 @@ export const colors = {
   "dark-3": "#415a77",
   "dark-4": "#778da9",
   "dark-5": "#e0e1dd",
-  "dark-6": "#ffffff",
+  "dark-font-color-1": "#ffffff",
+  "dark-font-color-2": "#adadad",
+  "dark-hyperlink-color": "#2563eb",
+  "dark-hyperlink-visited-color": "#4f46e5",
 };

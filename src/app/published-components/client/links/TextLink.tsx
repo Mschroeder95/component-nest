@@ -30,7 +30,7 @@ export default function TextLink({
   selected = selected === undefined ? pathname === href : selected;
   const selectedCss = selected
     ? "text-light-4 dark:text-dark-4"
-    : "text-light-6 dark:text-dark-6";
+    : "text-light-font-color-1 dark:text-dark-font-color-1";
 
   return (
     <div

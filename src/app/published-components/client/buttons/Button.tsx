@@ -21,7 +21,7 @@ export interface ButtonOnClickProps extends ClassName, Selectable {
   iconPlacement?: "left" | "right";
   onClick?: CallableFunction;
   href?: never;
-  children: string | IconElement;
+  children: string | IconElement | undefined;
 }
 
 export function Button({
@@ -48,14 +48,16 @@ export function Button({
       <div
         className={`flex ${iconPlacement == "right" ? "flex-row-reverse" : "flex-row"} min-h-[1.5rem] items-center gap-2`}
       >
-        {iconSrc && typeof children === "string" && (
-          <img className="h-[1rem]" src={iconSrc} alt={iconAlt} />
-        )}
+        {iconSrc && <img className="h-[1rem]" src={iconSrc} alt={iconAlt} />}
         {typeof children === "string" && (
-          <p className="text-light-6 dark:text-dark-6">{children}</p>
+          <p className="text-light-font-color-1 dark:text-dark-font-color-1">
+            {children}
+          </p>
         )}
-        {typeof children !== "string" && (
-          <p className="text-light-6 dark:text-dark-6">{children}</p>
+        {typeof children !== "string" && iconSrc === undefined && (
+          <p className="text-light-font-color-1 dark:text-dark-font-color-1">
+            {children}
+          </p>
         )}
       </div>
     </div>

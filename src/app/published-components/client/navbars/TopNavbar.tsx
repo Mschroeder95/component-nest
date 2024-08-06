@@ -27,7 +27,7 @@ export default function TopNavbar({
   return (
     <nav
       className={twMerge(
-        `flex h-20 w-screen border-y border-light-5/50 bg-light-1 p-2 dark:border-dark-4/50 dark:bg-dark-1`,
+        `sticky top-0 h-20 w-screen border-y border-light-5/50 bg-light-1 p-2 dark:border-dark-4/50 dark:bg-dark-1`,
         className,
       )}
     >
