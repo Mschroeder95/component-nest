@@ -19,8 +19,8 @@ export default function Docs() {
   //TODO: figure out how to share navbar height
   return (
     <main className="h-[calc(100vh-5rem)] w-screen bg-light-1 dark:bg-dark-1">
-      <div className="mx-auto flex h-full max-w-[90rem] flex-row">
-        <Sidebar>
+      <div className="mx-auto flex h-full max-w-[90rem] flex-row justify-center gap-8">
+        <Sidebar className="basis-1/4">
           {categories.map((category) => {
             return (
               <TextLink
@@ -35,7 +35,7 @@ export default function Docs() {
             );
           })}
         </Sidebar>
-        <div className="flex grow flex-col gap-8 pl-8">
+        <div className="flex basis-3/4 flex-col gap-8 overflow-y-auto py-8">
           {docsPageData.items.map((item, index) => {
             return (
               <div
@@ -43,13 +43,18 @@ export default function Docs() {
                 className={`flex flex-col gap-4 ${item.category == selectedCategory ? "flex" : "hidden"}`}
               >
                 <H2>{item.title}</H2>
-                <div className="flex min-h-[20rem] w-full flex-col items-center justify-center rounded-xl border border-light-4 dark:border-dark-4">
-                  {item.display}
-                  <pre className="language-html whitespace-normal">
-                    <code className="language-html whitespace-pre">
-                      {item.snippet}
-                    </code>
-                  </pre>
+                <div className="flex h-fit w-full flex-col">{item.details}</div>
+                <div className="flex min-h-[20rem] w-full flex-col rounded-t-xl border border-light-4 dark:border-dark-4">
+                  <div className="flex min-h-[10rem] items-center justify-center p-6">
+                    {item.display}
+                  </div>
+                  <div className="w-full grow bg-light-2/75 px-6 py-2 dark:bg-dark-2">
+                    <pre className="language-html">
+                      <code className="language-html text-light-font-color-1 dark:text-dark-font-color-1">
+                        {item.snippet}
+                      </code>
+                    </pre>
+                  </div>
                 </div>
               </div>
             );
