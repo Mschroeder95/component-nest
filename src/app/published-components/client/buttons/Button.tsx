@@ -24,7 +24,7 @@ export interface ButtonOnClickProps extends ClassName, Selectable {
   children: string | IconElement | undefined;
 }
 
-export function Button({
+export default function Button({
   children,
   selected,
   className,

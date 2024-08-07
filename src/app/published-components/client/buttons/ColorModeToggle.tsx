@@ -1,6 +1,6 @@
 import { toggleColorMode } from "../helper-functions/colorMode";
 import { MoonIcon, SunIcon } from "../icons/icons";
-import { Button } from "./Button";
+import Button from "./Button";
 
 export default function ColorModeToggle() {
   return (

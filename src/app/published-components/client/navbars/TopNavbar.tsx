@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { ClassName, HasChildNodes } from "../../shared-interfaces";
 import { useRouter } from "next/navigation";
 import { ThreeBarsIcon } from "../icons/icons";
-import { Button } from "../buttons/Button";
+import Button from "../buttons/Button";
 import { useState } from "react";
 import Modal from "../modals/Modal";
 

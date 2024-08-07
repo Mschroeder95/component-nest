@@ -1,4 +1,4 @@
-import { Button } from "./published-components/client/buttons/Button";
+import Button from "./published-components/client/buttons/Button";
 import CallToAction from "./published-components/client/headings/CallToAction";
 import H1 from "./published-components/client/headings/H1";
 import H3 from "./published-components/client/headings/H3";

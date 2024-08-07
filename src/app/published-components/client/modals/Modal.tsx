@@ -1,6 +1,6 @@
 import { twMerge } from "tailwind-merge";
 import { ClassName, HasChildNodes } from "../../shared-interfaces";
-import { Button } from "../buttons/Button";
+import Button from "../buttons/Button";
 import { CloseIcon } from "../icons/icons";
 
 interface ModalProps extends ClassName, HasChildNodes {

@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import TextLink from "../published-components/client/links/TextLink";
-import Sidebar from "../published-components/client/sidebars/sidebar";
+import Sidebar from "../published-components/client/sidebars/SideBar";
 import { docsPageData } from "./docs-page-data";
 import H2 from "../published-components/client/headings/H2";
 import TopNavbar from "../published-components/client/navbars/TopNavbar";
-import { Button } from "../published-components/client/buttons/Button";
+import Button from "../published-components/client/buttons/Button";
 
 export default function Docs() {
   let categories = Array.from(

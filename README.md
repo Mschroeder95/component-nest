@@ -26,7 +26,12 @@ npm install component-nest
 
 ## Adding new components
 
-## Deployment
+- Create new components in the [src/app/published-components](/src/app/published-components/) directory.
+- Until we have a better solution add an example of your new component to the [/src/app/docs/docs-page-data.tsx](/src/app/docs/docs-page-data.tsx) file and it will be automatically displayed on the documentation page of the website.
+- export your component its appropriate index.ts so it can be exported at the top level module [src/app/published-components/index.ts](src/app/published-components/index.ts)
+- Open a pull request and after your code merges it will be included in the next release.
+
+## Releasing New Components
 
 ### Releasing to NPM registry
 

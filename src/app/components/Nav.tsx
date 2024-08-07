@@ -2,7 +2,7 @@
 
 import TextLink from "../published-components/client/links/TextLink";
 import TopNavbar from "../published-components/client/navbars/TopNavbar";
-import { Button } from "../published-components/client/buttons/Button";
+import Button from "../published-components/client/buttons/Button";
 import ColorModeToggle from "../published-components/client/buttons/ColorModeToggle";
 
 export default function Nav() {

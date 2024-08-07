@@ -1,4 +1,4 @@
-import { Button } from "../published-components/client/buttons/Button";
+import Button from "../published-components/client/buttons/Button";
 import ColorModeToggle from "../published-components/client/buttons/ColorModeToggle";
 import CallToAction from "../published-components/client/headings/CallToAction";
 import H1 from "../published-components/client/headings/H1";
@@ -21,7 +21,7 @@ import LeadingParagraph from "../published-components/client/paragraphs/LeadingP
 import LinkParagraph from "../published-components/client/paragraphs/LinkParagraph";
 import Paragraph from "../published-components/client/paragraphs/Paragraph";
 import UnderlineParagraph from "../published-components/client/paragraphs/UnderlineParagraph";
-import SideBar from "../published-components/client/sidebars/sidebar";
+import SideBar from "../published-components/client/sidebars/SideBar";
 
 interface DocsPageItems {
   category: string;
