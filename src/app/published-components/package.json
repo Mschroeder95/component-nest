@@ -37,6 +37,10 @@
   },
   "homepage": "https://github.com/Mschroeder95/component-nest#readme",
   "dependencies": {
-    "tailwind-merge": "^2.4.0"
+    "tailwind-merge": "^2.4.0",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3"
   }
 }
