@@ -22,7 +22,17 @@ export default function Docs() {
   return (
     <main className="h-[calc(100vh-5rem)] w-screen bg-light-1 dark:bg-dark-1">
       <TopNavbar className="block md:hidden">
-        <Button>test</Button>
+        {categories.map((category) => {
+          return (
+            <Button
+              onClick={() => {
+                setSelectedCategory(category);
+              }}
+            >
+              {category}
+            </Button>
+          );
+        })}
       </TopNavbar>
       <div className="md:max-w-screen sm:max-w-screen mx-auto flex h-full max-w-[90rem] flex-row justify-center gap-8">
         <Sidebar className="">
@@ -40,7 +50,7 @@ export default function Docs() {
             );
           })}
         </Sidebar>
-        <div className="flex grow flex-col gap-8 overflow-y-auto py-8 sm:px-2">
+        <div className="flex grow flex-col gap-8 overflow-y-auto px-2 md:py-8">
           {docsPageData.items.map((item, index) => {
             return (
               <div
