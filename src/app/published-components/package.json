@@ -35,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/Mschroeder95/component-nest/issues"
   },
-  "homepage": "https://github.com/Mschroeder95/component-nest#readme"
+  "homepage": "https://github.com/Mschroeder95/component-nest#readme",
+  "dependencies": {
+    "tailwind-merge": "^2.4.0"
+  }
 }
