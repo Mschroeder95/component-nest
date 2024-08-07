@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Nav from "./components/Nav";
+import { getColorMode } from "./published-components/server/theme/color-mode";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,9 +16,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const colorMode = getColorMode("light");
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${colorMode}`}>
+      <head></head>
+      <body className={inter.className}>
+        <Nav></Nav>
+        {children}
+      </body>
     </html>
   );
 }
