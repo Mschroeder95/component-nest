@@ -3,7 +3,7 @@ import { ClassName, HasChildNodes } from "../../shared-interfaces";
 
 export interface ItalicParagraphProps extends ClassName, HasChildNodes {}
 
-export default function UnderlineParagraph({
+export default function ItalicParagraph({
   className,
   children,
 }: ItalicParagraphProps) {

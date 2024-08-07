@@ -20,7 +20,7 @@ export default function Docs() {
 
   //TODO: figure out how to share navbar height
   return (
-    <main className="h-[calc(100vh-5rem)] w-screen bg-light-1 dark:bg-dark-1">
+    <main className="h-[calc(100vh-5rem)] w-screen bg-light-1 px-2 md:py-8 dark:bg-dark-1">
       <TopNavbar className="block md:hidden">
         {categories.map((category) => {
           return (
@@ -50,7 +50,7 @@ export default function Docs() {
             );
           })}
         </Sidebar>
-        <div className="flex grow flex-col gap-8 overflow-y-auto px-2 md:py-8">
+        <div className="flex grow flex-col gap-8 overflow-y-auto">
           {docsPageData.items.map((item, index) => {
             return (
               <div
@@ -60,7 +60,7 @@ export default function Docs() {
                 <H2>{item.title}</H2>
                 <div className="flex h-fit w-full flex-col">{item.details}</div>
                 <div className="flex min-h-[20rem] w-full flex-col rounded-t-xl border border-light-4 dark:border-dark-4">
-                  <div className="flex min-h-[10rem] items-center justify-center p-6">
+                  <div className="flex max-h-[30rem] min-h-[10rem] items-center justify-center p-6">
                     {item.display}
                   </div>
                   <div className="w-full grow bg-light-2/75 px-6 py-2 dark:bg-dark-2">
