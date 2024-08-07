@@ -8,7 +8,7 @@ interface SideBarProps extends ClassName {
 export default function SideBar({ className, children }: SideBarProps) {
   return (
     <aside
-      className={`hidden h-full w-fit flex-col overflow-y-auto py-4 md:flex lg:flex xl:flex`}
+      className={`hidden h-full w-fit min-w-[10rem] flex-col overflow-y-auto py-4 md:flex lg:flex xl:flex`}
     >
       {children.map((child, index) => {
         return (

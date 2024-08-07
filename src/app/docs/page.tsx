@@ -5,6 +5,8 @@ import TextLink from "../published-components/client/links/TextLink";
 import Sidebar from "../published-components/client/sidebars/sidebar";
 import { docsPageData } from "./docs-page-data";
 import H2 from "../published-components/client/headings/H2";
+import TopNavbar from "../published-components/client/navbars/TopNavbar";
+import { Button } from "../published-components/client/buttons/Button";
 
 export default function Docs() {
   let categories = Array.from(
@@ -19,8 +21,11 @@ export default function Docs() {
   //TODO: figure out how to share navbar height
   return (
     <main className="h-[calc(100vh-5rem)] w-screen bg-light-1 dark:bg-dark-1">
-      <div className="mx-auto flex h-full max-w-[90rem] flex-row justify-center gap-8">
-        <Sidebar className="basis-1/4">
+      <TopNavbar className="block md:hidden">
+        <Button>test</Button>
+      </TopNavbar>
+      <div className="md:max-w-screen sm:max-w-screen mx-auto flex h-full max-w-[90rem] flex-row justify-center gap-8">
+        <Sidebar className="">
           {categories.map((category) => {
             return (
               <TextLink
@@ -35,7 +40,7 @@ export default function Docs() {
             );
           })}
         </Sidebar>
-        <div className="flex basis-3/4 flex-col gap-8 overflow-y-auto py-8">
+        <div className="flex grow flex-col gap-8 overflow-y-auto py-8 sm:px-2">
           {docsPageData.items.map((item, index) => {
             return (
               <div
