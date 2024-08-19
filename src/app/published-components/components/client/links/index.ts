@@ -1,2 +1,2 @@
-import TextLink from "./TextLink";
+import * as TextLink from "./TextLink";
 export { TextLink };
