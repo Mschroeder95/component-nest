@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import TextLink from "../published-components/client/links/TextLink";
-import Sidebar from "../published-components/client/sidebars/SideBar";
 import { docsPageData } from "./docs-page-data";
-import H2 from "../published-components/client/headings/H2";
-import TopNavbar from "../published-components/client/navbars/TopNavbar";
-import Button from "../published-components/client/buttons/Button";
+import TopNavbar from "../published-components/components/client/navbars/TopNavbar";
+import { Button } from "../published-components/components/client/buttons";
+import SideBar from "../published-components/components/client/sidebars/SideBar";
+import H2 from "../published-components/components/client/headings/H2";
+import TextLink from "../published-components/components/client/links/TextLink";
 
 export default function Docs() {
   let categories = Array.from(
@@ -35,7 +35,7 @@ export default function Docs() {
         })}
       </TopNavbar>
       <div className="md:max-w-screen sm:max-w-screen mx-auto flex h-full max-w-[90rem] flex-row justify-center gap-8">
-        <Sidebar className="">
+        <SideBar className="">
           {categories.map((category) => {
             return (
               <TextLink
@@ -49,7 +49,7 @@ export default function Docs() {
               </TextLink>
             );
           })}
-        </Sidebar>
+        </SideBar>
         <div className="flex grow flex-col gap-8 overflow-y-auto">
           {docsPageData.items.map((item, index) => {
             return (

@@ -1,27 +1,27 @@
-import Button from "../published-components/client/buttons/Button";
-import ColorModeToggle from "../published-components/client/buttons/ColorModeToggle";
-import CallToAction from "../published-components/client/headings/CallToAction";
-import H1 from "../published-components/client/headings/H1";
-import H2 from "../published-components/client/headings/H2";
-import H3 from "../published-components/client/headings/H3";
-import H4 from "../published-components/client/headings/H4";
-import H5 from "../published-components/client/headings/H5";
-import H6 from "../published-components/client/headings/H6";
+import Button from "../published-components/components/client/buttons/Button";
+import ColorModeToggle from "../published-components/components/client/buttons/ColorModeToggle";
+import CallToAction from "../published-components/components/client/headings/CallToAction";
+import H1 from "../published-components/components/client/headings/H1";
+import H2 from "../published-components/components/client/headings/H2";
+import H3 from "../published-components/components/client/headings/H3";
+import H4 from "../published-components/components/client/headings/H4";
+import H5 from "../published-components/components/client/headings/H5";
+import H6 from "../published-components/components/client/headings/H6";
 import {
   MoonIcon,
   SunIcon,
   ThreeBarsIcon,
-} from "../published-components/client/icons/icons";
-import TextLink from "../published-components/client/links/TextLink";
-import Modal from "../published-components/client/modals/Modal";
-import BoldParagraph from "../published-components/client/paragraphs/BoldParagraph";
-import FirstLetterParagraph from "../published-components/client/paragraphs/FirstLetterParagraph";
-import ItalicParagraph from "../published-components/client/paragraphs/ItalicParagraph";
-import LeadingParagraph from "../published-components/client/paragraphs/LeadingParagraph";
-import LinkParagraph from "../published-components/client/paragraphs/LinkParagraph";
-import Paragraph from "../published-components/client/paragraphs/Paragraph";
-import UnderlineParagraph from "../published-components/client/paragraphs/UnderlineParagraph";
-import SideBar from "../published-components/client/sidebars/SideBar";
+} from "../published-components/components/client/icons/icons";
+import TextLink from "../published-components/components/client/links/TextLink";
+import Modal from "../published-components/components/client/modals/Modal";
+import BoldParagraph from "../published-components/components/client/paragraphs/BoldParagraph";
+import FirstLetterParagraph from "../published-components/components/client/paragraphs/FirstLetterParagraph";
+import ItalicParagraph from "../published-components/components/client/paragraphs/ItalicParagraph";
+import LeadingParagraph from "../published-components/components/client/paragraphs/LeadingParagraph";
+import LinkParagraph from "../published-components/components/client/paragraphs/LinkParagraph";
+import Paragraph from "../published-components/components/client/paragraphs/Paragraph";
+import UnderlineParagraph from "../published-components/components/client/paragraphs/UnderlineParagraph";
+import SideBar from "../published-components/components/client/sidebars/SideBar";
 
 interface DocsPageItems {
   category: string;

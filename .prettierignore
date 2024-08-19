@@ -2,3 +2,5 @@
 build
 coverage
 docs-page-date.tsx
+node_modules
+./**/node_modules

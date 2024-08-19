@@ -1,4 +1,4 @@
-export const colors = {
+export let colors = {
   "light-hyperlink-color": "#2563eb",
   "light-hyperlink-visited-color": "#4f46e5",
   "light-font-color-1": "#000000",
