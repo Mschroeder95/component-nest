@@ -1,4 +1,4 @@
-import * as Button from "./Button";
-import * as ColorModeToggle from "./ColorModeToggle";
+import Button from "./Button";
+import ColorModeToggle from "./ColorModeToggle";
 
 export { Button, ColorModeToggle };
