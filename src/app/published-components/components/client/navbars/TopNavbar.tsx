@@ -65,7 +65,7 @@ export default function TopNavbar({
       </nav>
       <Modal
         center={false}
-        className={`${isMobileMenuOpen ? "absolute" : "hidden"} right-2 top-2 z-10 md:hidden lg:hidden`}
+        className={`${isMobileMenuOpen ? "absolute" : "hidden"} left-[1vw] top-2 z-10 w-[98vw] md:hidden lg:hidden`}
         onDismiss={() => setIsMobileMenuOpen(false)}
       >
         <div className="space-between flex flex-col items-start space-y-4">
