@@ -3,10 +3,11 @@
 import { useState } from "react";
 import { docsPageData } from "./docs-page-data";
 import TopNavbar from "../published-components/components/client/navbars/TopNavbar";
-import { Button } from "../published-components/components/client/buttons";
+
 import SideBar from "../published-components/components/client/sidebars/SideBar";
 import H2 from "../published-components/components/client/headings/H2";
 import TextLink from "../published-components/components/client/links/TextLink";
+import Button from "../published-components/components/client/buttons/Button";
 
 export default function Docs() {
   let categories = Array.from(
@@ -25,6 +26,7 @@ export default function Docs() {
         {categories.map((category) => {
           return (
             <Button
+              key={category}
               onClick={() => {
                 setSelectedCategory(category);
               }}

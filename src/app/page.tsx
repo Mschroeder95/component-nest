@@ -1,12 +1,12 @@
-import Button from "./published-components/client/buttons/Button";
-import CallToAction from "./published-components/client/headings/CallToAction";
-import H1 from "./published-components/client/headings/H1";
-import H3 from "./published-components/client/headings/H3";
-import H4 from "./published-components/client/headings/H4";
-import BoldParagraph from "./published-components/client/paragraphs/BoldParagraph";
-import LeadingParagraph from "./published-components/client/paragraphs/LeadingParagraph";
-import LinkParagraph from "./published-components/client/paragraphs/LinkParagraph";
-import Paragraph from "./published-components/client/paragraphs/Paragraph";
+import Button from "./published-components/components/client/buttons/Button";
+import CallToAction from "./published-components/components/client/headings/CallToAction";
+import H1 from "./published-components/components/client/headings/H1";
+import H3 from "./published-components/components/client/headings/H3";
+import H4 from "./published-components/components/client/headings/H4";
+import BoldParagraph from "./published-components/components/client/paragraphs/BoldParagraph";
+import LeadingParagraph from "./published-components/components/client/paragraphs/LeadingParagraph";
+import LinkParagraph from "./published-components/components/client/paragraphs/LinkParagraph";
+import Paragraph from "./published-components/components/client/paragraphs/Paragraph";
 
 export default function Home() {
   return (

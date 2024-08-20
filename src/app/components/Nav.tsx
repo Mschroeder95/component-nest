@@ -1,9 +1,9 @@
 "use client";
 
-import TextLink from "../published-components/client/links/TextLink";
-import TopNavbar from "../published-components/client/navbars/TopNavbar";
-import Button from "../published-components/client/buttons/Button";
-import ColorModeToggle from "../published-components/client/buttons/ColorModeToggle";
+import Button from "../published-components/components/client/buttons/Button";
+import ColorModeToggle from "../published-components/components/client/buttons/ColorModeToggle";
+import TextLink from "../published-components/components/client/links/TextLink";
+import TopNavbar from "../published-components/components/client/navbars/TopNavbar";
 
 export default function Nav() {
   return (
