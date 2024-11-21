@@ -14,7 +14,10 @@ export interface Selectable {
   selected?: boolean | undefined;
 }
 
+export interface FormInput {}
+
 export type ColorModeOptions = "dark" | "light";
+
 export interface ColorMode {
   colorMode: ColorModeOptions;
 }

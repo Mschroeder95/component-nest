@@ -12,6 +12,7 @@ import {
   SunIcon,
   ThreeBarsIcon,
 } from "../published-components/components/client/icons/icons";
+import TextAreaInput from "../published-components/components/client/input/TextAreaInput";
 import TextLink from "../published-components/components/client/links/TextLink";
 import Modal from "../published-components/components/client/modals/Modal";
 import BoldParagraph from "../published-components/components/client/paragraphs/BoldParagraph";
@@ -22,6 +23,8 @@ import LinkParagraph from "../published-components/components/client/paragraphs/
 import Paragraph from "../published-components/components/client/paragraphs/Paragraph";
 import UnderlineParagraph from "../published-components/components/client/paragraphs/UnderlineParagraph";
 import SideBar from "../published-components/components/client/sidebars/SideBar";
+import Select from "../published-components/components/client/input/Select";
+import Input from "../published-components/components/client/input/Input";
 
 interface DocsPageItems {
   category: string;
@@ -382,6 +385,113 @@ subtitle={'A call to action can be used to draw attention to something that we w
       ),
       snippet: `
 <UnderlineParagraph>...text content...</UnderlineParagraph>
+      `,
+    },
+    {
+      category: "Input",
+      title: "Text Input",
+      details: <></>,
+      display: (
+        <Input
+          id="myFieldId"
+          type="text"
+          name="myField"
+          label="Input Some Text"
+          error="blah blah blah"
+          hint="asdfasdf asdf asdf asdf"
+          placeholder="placeholder"
+          required={true}
+        ></Input>
+      ),
+      snippet: `
+TODO
+      `,
+    },
+    {
+      category: "Input",
+      title: "Text Input",
+      details: <></>,
+      display: (
+        <Input
+          id="myDateId"
+          type="date"
+          name="myDate"
+          label="Input Some Text"
+          hint="asdfasdf asdf asdf asdf"
+          placeholder="placeholder"
+          required={true}
+        ></Input>
+      ),
+      snippet: `
+TODO
+      `,
+    },
+    {
+      category: "Input",
+      title: "Text Area",
+      details: <></>,
+      display: (
+        <TextAreaInput
+          id="myTextAreaId"
+          name="myTextArea"
+          label="Input Some Text"
+          hint="asdfasdf asdf asdf asdf"
+          required={true}
+          className="w-[40rem]"
+          placeholder="placeholder"
+        ></TextAreaInput>
+      ),
+      snippet: `
+TODO
+      `,
+    },
+    {
+      category: "Input",
+      title: "Text Area",
+      details: <></>,
+      display: (
+        <TextAreaInput
+          id="myTextAreaId"
+          name="myTextArea"
+          label="Input Some Text"
+          hint="asdfasdf asdf asdf asdf"
+          required={true}
+          className="w-[40rem]"
+          error="This is an error"
+          placeholder="placeholder"
+        ></TextAreaInput>
+      ),
+      snippet: `
+TODO
+      `,
+    },
+    {
+      category: "Input",
+      title: "Select",
+      details: <></>,
+      display: (
+        <Select
+          id="myTextAreaId"
+          name="myTextArea"
+          label="Input Some Text"
+          hint="asdfasdf asdf asdf asdf"
+          required={true}
+          className="w-[40rem]"
+          error="This is an error"
+          options={[
+            {
+              displayName: "WI",
+              value: "wisconsin",
+            },
+            {
+              displayName: "NY",
+              value: "New York",
+            },
+          ]}
+        ></Select>
+      ),
+      snippet: `
+TODO
       `,
     },
   ],
