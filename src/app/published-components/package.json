@@ -30,8 +30,10 @@
   },
   "homepage": "https://github.com/Mschroeder95/component-nest#readme",
   "dependencies": {
+    "audit": "^0.0.6",
     "autoprefixer": "^10.4.20",
-    "next": "14.2.5",
+    "fix": "^0.0.3",
+    "next": "^14.2.18",
     "postcss": "^8.4.41",
     "react": "^18",
     "react-dom": "^18",
