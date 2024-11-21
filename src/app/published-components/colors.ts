@@ -17,4 +17,9 @@ export let colors = {
   "dark-font-color-2": "#adadad",
   "dark-hyperlink-color": "#2563eb",
   "dark-hyperlink-visited-color": "#4f46e5",
+  error: "#ff0033",
+  "light-disabled-1": "#f9fafb",
+  "light-disabled-2": "#d1d5db",
+  "dark-disabled-1": "#374151",
+  "dark-disabled-2": "#111827",
 };
