@@ -31,7 +31,7 @@
   "homepage": "https://github.com/Mschroeder95/component-nest#readme",
   "dependencies": {
     "autoprefixer": "^10.4.20",
-    "next": "14.2.5",
+    "next": "^14.2.18",
     "postcss": "^8.4.41",
     "react": "^18",
     "react-dom": "^18",
