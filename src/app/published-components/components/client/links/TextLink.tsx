@@ -38,12 +38,13 @@ export default function TextLink({
 
   return (
     <div
-      className={twMerge(`group/link cusor-pointer h-fit w-fit`, className)}
+      className={twMerge(
+        `group/link cusor-pointer h-fit w-fit group-hover/link:text-light-4 dark:group-hover/link:text-dark-4 ${selectedCss}`,
+        className,
+      )}
       onClick={() => buildOnClick(router, onClick, href)()}
     >
-      <p
-        className={`cursor-pointer select-none transition-all ease-in-out group-hover/link:text-light-4 dark:group-hover/link:text-dark-4 ${selectedCss}`}
-      >
+      <p className={`cursor-pointer select-none transition-all ease-in-out`}>
         {children}
       </p>
     </div>
